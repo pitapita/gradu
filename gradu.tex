@@ -1,0 +1,136 @@
+\nonstopmode
+% \batchmode jos et halua nähdä
+\documentclass[12pt,a4paper]{article}
+
+\title{Pro Gradu -tutkielma}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,finnish]{babel}
+
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage[nottoc,numbib]{tocbibind}
+
+%\usepackage{nanbib}	
+%\bibpunct{(}{)}{;}{a}{,}{,}
+
+
+\usepackage{csquotes}
+\usepackage[backend=biber,
+        citestyle=authoryear-ibid,
+        bibstyle=authoryear,
+        sorting=nyt,
+        sortlocale=ru_RU,
+        maxnames=2,
+        minnames=1,
+        language=auto,%autobib laittaa et.al merkinnät kaikki venäjäksi
+        autolang=other*,
+        isbn=false,
+        url=false,
+        doi=false,
+        %pagetracker=true,
+        %citecounter=true,
+        %citetracker=true,
+        %ibidtracker=true,
+        autocite=plain
+        ]
+{biblatex}
+
+\addbibresource{references.bib}
+
+
+
+
+\setlength{\parindent}{4ex}
+\setlength{\parskip}{0ex}% Kappaleiden välin asetus
+
+\linespread{1.3}
+
+\addto\captionsrussian{% Replace "english" with the language you use
+  \renewcommand{\contentsname}%
+    {Оглавнение}%
+}
+
+\addto\captionsrussian{% Replace "english" with the language you use
+  \renewcommand{\bibname}
+    {Список использоваемой литературы}
+}
+
+\addto\captionsrussian{% Replace "english" with the language you use
+  \renewcommand{\refname}
+    {Список использоваемой литературы}
+}
+
+\setlength{\voffset}{-0.02in}
+\setlength{\hoffset}{0.57in}
+\setlength{\marginparsep}{0pt}
+
+% \usepackage{graphicx}
+% tai \usepackage{graphics}
+% kuvatiedostojen liittämiseksi
+
+\begin{document}
+
+\begin{titlepage}
+\noindent
+\begin{center}	
+  \setlength{\parindent}{0mm}
+  \sloppy
+  \large \textsc{Хельсинкский университет}
+  \vspace{5mm}
+
+  \huge \textbf{Моя работа}
+  \vspace{2mm}
+  \textcolor{blue}\hrule
+    \vspace{2mm}
+    \large Pro Gradu -tutkielma
+    \linebreak \vfill   
+
+  
+%\vspace{20mm}
+	
+  \end{center}
+  \vspace{15mm}
+	\vfill
+	
+    \begin{flushright}
+    	Tapio M. Pitkäranta \\
+		Pro Gradu \\
+		Venäjän kieli ja kirjallisuus \\
+		Nykykielten laitos \\
+		Helsingin yliopisto \\
+		\today
+	\end{flushright}
+\end{titlepage}
+
+%Valitaan tämän osuuden kieli
+\selectlanguage{russian}
+
+\tableofcontents
+
+\pagebreak
+
+%%% Oma teksti tämän jälkeen.
+%%% Tyhjä rivi kappalten väliin.§] omiin tarkoituksiinsa.
+
+\section{Введение}
+
+Обыкновенный текст, который должен быть читаемым. И ещё немножечко. Краткая ссылка: \textcite[150--152]{kobrinski2013} отметит что–то. Обычные ''кавычки'', <<русские кавычки>> и «Unicode». \parencite[200]{kobrinski2013}.
+
+Toisessa kappaleessa kerrotaan lisää. \parencite{shapir2007}. Täydellinen viittaus teokseen,
+jolla on useampi tekijä näyttää vielä täydellisempänä
+tältä \parencite[][268]{SKS2007}, mutta kun viitataan heti uudellen, tulee tällainen tulos
+\parencite[50]{SKS2007}. Jos useamman tekijän lähde on venäläinen, viittaus näyttää tältä
+\parencite{ljustrova1976}. Tässä viitataan teokseen, jolle on määritelty kääntäjä
+\parencite[25]{ref:sologub1918}.
+
+\subsection{Что-то ещё}
+
+Huomaa, että lähde ei tule lähdeluetteloon, ellei siihen jotenkin
+viitata \parencite[55]{artjunova1983}.
+
+
+\printbibliography[heading=bibintoc,title={Список использоваемой литературы}]
+
+\end{document}
