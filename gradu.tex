@@ -2,22 +2,31 @@
 \batchmode %jos et halua nähdä
 \documentclass[12pt,a4paper]{article}
 
+\usepackage[head=0.98in,foot=0.98in]{geometry}
+
 \title{Pro Gradu -tutkielma}
 
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[russian,english,finnish]{babel}
+\usepackage[russian,greek,english,finnish]{babel}
 
 \usepackage{indentfirst}
 \usepackage{color}
 \usepackage[nottoc,numbib]{tocbibind}
 
+\usepackage{fancyhdr}
+\pagestyle{myheadings}
 
 %\usepackage{nanbib}	
 %\bibpunct{(}{)}{;}{a}{,}{,}
 
+\usepackage[autostyle=true, style=russian]{csquotes}
+%saadaan venäläiset aakkoset listoihin
+\usepackage{enumitem}
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
 
-\usepackage{csquotes}
 \usepackage[backend=biber,
         citestyle=authoryear-ibid,
         bibstyle=authortitle,
@@ -39,9 +48,6 @@
 {biblatex}
 
 \addbibresource{viitteet.bib}
-
-
-
 
 \setlength{\parindent}{4ex}
 \setlength{\parskip}{0ex}% Kappaleiden välin asetus
@@ -112,6 +118,7 @@
 \selectlanguage{russian}
 
 \tableofcontents
+\thispagestyle{empty}
 
 \pagebreak
 
@@ -142,7 +149,45 @@ tässä näkyy tiukka modernismin vaikutus. ETSI JOKU LÄHDE
  Поэтический словарь Сологуба пестрит словами смерть, труп, гроб, прах, склеп, могила, похороны, тьма, мгла.
  «Ибо все и во всем — Я, и только Я, и нет ничего, и не было и не будет», — таким утверждением в духе солипсизма завершается предисловие поэта к этому сборнику. Это же предисловие открыло первый том «Собрания сочинений» Сологуба в издательстве «Сирин».
 
-\section{Сологубская теория искусства}
+\section{Сологубовская теория искусства}
+
+В. В. Ерофеев в своей статье \citetitle{jerofeev1985} tulkitsee romaania «Мелкий бес». Hänen pääteesinään artikkelissa on, että F. Sologubin romaani on siirtymäkauden tuote, joka suhtautuu parodioivasti aiempaan venäläiseen romaanitraditioon, erityisesti kriittiseen realismiin, mutta myös muun muassa Gogolin, Puškinin ja Dostojevskin tuotantoon. Perinteisessä venäläisessä romaanissa on hänen mukaansa pohjalla käsitys totuuden, hyvyyden ja kauneuden keskinäisestä vastaavuudesta, sekä huolimatta mahdollisesta kriittisestä asenteesta yhteiskunnan epäkohtiin, kaiken alla oleva toivo mahdollisesta paremmasta huomisesta. Tämä toivo on Sologubin romaanissa kuitenkin vaihdettu kaipaukseen, joka ei voi toteutua. 
+
+\enquote{калокагатия} \foreignlanguage{greek}{καλοκαγαθία}
+
+
+
+Jerofejevin tulkinta romaanista, vaikka onkin paljon suppeampi, ei ole vastakkainen Z.G. Mintsin kanssa, joka artikkelissaan
+З.Г. Минц в своей статье \citetitle{mints2004} laskee F. Sologubin romaanin osaksi uusmytologista romaanitraditiota, traditiota, joka huipentuu Andrei Belyin romaanissa «Петербург». Mytopoeettisen tekstin pohjalla on Vladimir Solovjovin ajattelu ja sen kolmijakoinen maailmankuva: Alun kaunis ja hyvä maailma, jonka kaaos tuhoaa ja josta pyritään kohti synteesiä. Uusmytologinen teksti ottaa tietoisesti vaikutteita eri lähteistä ja traditioista ja käyttää niitä hyväkseen rakentaakseen oman maailmakuvansa, oman myyttinsä.  Tyypillisesti yhtenä neomytologisen myytin lähteenä on oman aikansa arkitodellisuus. Sologubilla se on omaelämänkerrallisista aineistoista koottu, itse koettu maailma. Mints määrittelee, että Peredonovin myytti koostuu seuraavista aineksista:
+
+
+\begin{enumerate}[itemsep=0mm, label=\asbuk*)]
+\item realismin myytit provinssin elämästä Гоголь \enquote{Человек в футляре} Чехова.
+\item \enquote{Мертвые души}
+\item \enquote{Бесы}, \enquote{Идиот} Достоевского, безумие, хаос
+\item \enquote{Пиковая дама} Пушкина, безумые, мотивы игровых карт
+\item Недотыкомка, безумия нормальной мещанской жизни
+\item Мифы, которые Передонов творит сам
+\end{enumerate}
+
+Näiden lisäksi eri tutkijat ovat lisänneet listaan esimerksi Don Quixoten \parencite{bagno2009} ja erilaiset raamatulliset motiivit ja myytit \parencite{kobrinski2013}.
+
+Tässä siis yhtenä teksti-myyttinä on todellakin myös realistisen romaanin traditio, jota Jerofejev ansiokkaasti kuvailee tulkinnassaan, mutta se on vain osa suurempaa, ylemmän tason myyttiä, jossa ne vaikuttavat Mintsin kuvailemassa neomytologisen kirjallisuuden systeemissä. Näin ollen tässä systeemissä yksikertainen parodia ei ole mahdollinen tulkinta. Se edellyttäisi sitä, että romaanissa on kuuluvissa joku tekijän yhtenäinen ääni, joka parodioi venäläistä romaanitraditiota. Sen sijaan kyseessä on yksi lukuisista dikotomioista, teesi ja antiteesi, jonka osina on toisaalta romantiikan ironinen tyyli ja toisaalta realismin tyyli. 
+
+Vastaavana dikotomiana voidaan nähdä myös dekadenssi ja symbolismi. Mints kirjoittaa tästä... Mutta kuitenkin oli kiistoja.... Näiden synteesinä voidaan nähdä uuden ajan modernistinen romaani, josta Sologub unelmoi jo vuonna 1896 kirjoittamassan julkaisemattomassa artikkelissaan \enquote{Не постыдно ли быть декадентом} \parencite{ref:sologub2007}. Siinä hän kirjoittaa:
+
+\begin{quote}
+Уже и теперь мы видим литературные произведения, в которых символизм облекался в формы декадентские, и которые производят глубокое впечатление. Будущее же в литературе принадлежит тому гению, который не убоится уничижительной клички декадента и с побеждающей художественной силой сочетает символическое мировоззрение с декадентскими формами.
+\parencite[501.]{ref:sologub2007}
+\end{quote}
+
+По мнению Ерофеева, З.Г. Минц излишне мифологизирует романа, и он полагате, что мифологический материал в сюжетной линии с Людмилой и Сашей не связан напрамую с древней мифологией а с современной французской и русской литературной модой. Однако, Ерофеев 
+
+Jerofejevin mielestä Mints mytologisoi romaania liikaa ja oikea lähde romaanin mytologisille aineksille on ajan muoti käyttää kirjallisuuden aineksena mytologisia aiheita. Ljudmilan unien tematiikka ei hänen mielestään ole peräisin suoraan antiikin myyteistä, vaan mutkan kautta ranskalaisesta kirjallisuudesta. \parencite[152.]{jerofeev1985} Jerofeejev ei kuitenkaan ota huomioon sitä, että Mintsin kuvaileman neomytologisen romaanin systeemissä myös nykyaikaisen ranskalaisen kirjallisuuden teksti-myytti voi tulla osaksi romaanin kuvailemaa «картина мир» mytologista tekstiä. Kuten Mints toteaa, myyttien lähtökohtana voi aivan yhtä hyvin olla antiikki kuin nykyajan todelliset tapahtumat. Jerofejevin huomi siis ei kumoa Mintsin artikkelin teesejä, vaan jopa vahvistaa niitä, koska hän tuo systeemiin vielä yhden mahdollisen myytin, joka lisää edelleen uusmytologiselle romaanilla ominaista dikotomiaa eri myyttien välillä. При этом, Mints itse huomauttaa, että ei aio tarkastella venäläisen symbolismin suhdetta venäläiseen. 
+
+
+
+Jerofejevin tekemä huomio monikasvoisesta \enquote{многолик} kertojasta on kuitenkin asiaankuuluva, ja tätä aspektia ei Mintsin artikkelissa oteta huomioon. Uusmytologisen tekstin myyttien keskinäinen dikotomia ei voi olla näkymättä myös romaanin kerronnassa ja narrotologisessa rakenteessa. 
 
 \section{Мелкий бес}
 
